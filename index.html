@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Beat · Como</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome per icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR MODERNA -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-bold">LAKE</span> BEAT
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#lineup">Lineup</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="about.html">About</a></li> <!-- NUOVO LINK -->
+                <li><a href="#sponsors">Partners</a></li>
+                <li><a href="#tickets" class="nav-cta">Get Tickets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION MODERNA -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-video-bg">
+            <div class="hero-image-layer"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-tagline">12-13 JUNE 2026 · PIAZZA CAVOUR</span>
+            <h1 class="hero-title">
+                <span class="title-line">LAKE</span>
+                <span class="title-line gradient-text">BEAT</span>
+            </h1>
+            <p class="hero-subtitle">The Ultimate Lakeside Experience</p>
+            <div class="hero-cta">
+                <a href="#tickets" class="btn btn-primary">GET TICKETS</a>
+                <a href="#lineup" class="btn btn-outline">VIEW LINEUP</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">14-20</span>
+                    <span class="stat-label">AGE</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20:30</span>
+                    <span class="stat-label">START</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">04:00</span>
+                    <span class="stat-label">END</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION CON FOTO -->
+    <section class="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">THE VENUE</span>
+                <h2 class="section-title">PIAZZA CAVOUR <span class="gradient-text">TRANSFORMED</span></h2>
+            </div>
+            <div class="location-grid">
+                <div class="location-content">
+                    <p class="location-description">The historic heart of Como becomes an open-air stage. Professional
+                        sound, lighting, and stages built right on the lakefront.</p>
+                    <div class="location-features">
+                        <div class="feature">
+                            <i class="fas fa-volume-up"></i>
+                            <span>Professional Audio</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-glass-cheers"></i>
+                            <span>Multiple Bars</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-couch"></i>
+                            <span>VIP Lounges</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <span>Photo Areas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-gallery">
+                    <div class="gallery-main">
+                        <!-- FOTO PIAZZA CAVOUR CON PALCO -->
+                        <img src="images/hero/hero-piazza.jpg" alt="Piazza Cavour with stage" class="gallery-img">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="thumb active"></div>
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIBE SECTION -->
+    <section class="vibe">
+        <div class="container">
+            <div class="vibe-cards">
+                <div class="vibe-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Age Target</h3>
+                    <p class="vibe-number">14-20</p>
+                    <p class="vibe-label">The next generation</p>
+                </div>
+                <div class="vibe-card featured">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hours</h3>
+                    <p class="vibe-number">20:30 - 04:00</p>
+                    <p class="vibe-label">Non-stop energy</p>
+                </div>
+                <div class="vibe-card">
+                    <div class="card-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Sound</h3>
+                    <p class="vibe-number">TRAP · REGGAETON</p>
+                    <p class="vibe-label">Urban beats only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LINEUP SECTION -->
+    <section id="lineup" class="lineup">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">THE ARTISTS</span>
+                <h2 class="section-title">LINEUP <span class="gradient-text">2026</span></h2>
+            </div>
+            <div class="lineup-grid">
+                <div class="artist-card headliner">
+                    <div class="artist-image">
+                        <!-- FOTO ANUEL AA -->
+                        <img src="images/artists/anuel-aa.jpg" alt="Anuel AA">
+                        <div class="artist-overlay">
+                            <span class="artist-day">SATURDAY</span>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <h3>ANUEL AA</h3>
+                        <span class="artist-genre">REGGAETON · HEADLINER</span>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <!-- FOTO RVFV -->
+                        <img src="images/artists/rvfv.jpg" alt="Rvfv">
+                    </div>
+                    <div class="artist-info">
+                        <h3>RVFV</h3>
+                        <span class="artist-genre">REGGAETON</span>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <!-- FOTO 22simba -->
+                        <img src="images/artists/22simba.jpg" alt="22simba">
+                    </div>
+                    <div class="artist-info">
+                        <h3>22SIMBA</h3>
+                        <span class="artist-genre">TRAP</span>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <!-- FOTO Sfera Ebbasta -->
+                        <img src="images/artists/sfera-ebbasta.jpg" alt="Sfera Ebbasta">
+                    </div>
+                    <div class="artist-info">
+                        <h3>SFERA EBBASTA</h3>
+                        <span class="artist-genre">TRAP</span>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <!-- FOTO OZUNA -->
+                        <img src="images/artists/ozuna.jpg" alt="Ozuna">
+                    </div>
+                    <div class="artist-info">
+                        <h3>OZUNA</h3>
+                        <span class="artist-genre">REGGAETON</span>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <!-- FOTO Bad Bunny -->
+                        <img src="images/artists/bad-bunny.jpg" alt="Bad Bunny">
+                    </div>
+                    <div class="artist-info">
+                        <h3>BAD BUNNY</h3>
+                        <span class="artist-genre">REGGAETON</span>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <!-- FOTO Artie 5ive -->
+                        <img src="images/artists/artie-5ive.jpg" alt="Artie 5ive">
+                    </div>
+                    <div class="artist-info">
+                        <h3>ARTIE 5IVE</h3>
+                        <span class="artist-genre">TRAP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lineup-cta">
+                <p>+ More artists to be announced</p>
+                <a href="#" class="btn btn-outline-light">FULL SCHEDULE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKETS SECTION -->
+    <section id="tickets" class="tickets">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-subtitle">JOIN US</span>
+                <h2 class="section-title">CHOOSE YOUR <span class="gradient-text">EXPERIENCE</span></h2>
+            </div>
+            <div class="ticket-grid">
+                <div class="ticket-card">
+                    <div class="ticket-badge">EARLY BIRD</div>
+                    <div class="ticket-price">
+                        <span class="currency">€</span>
+                        <span class="amount">15</span>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> Main stage access</li>
+                        <li><i class="fas fa-check"></i> 20:30 - 04:00</li>
+                        <li><i class="fas fa-check"></i> All bars access</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">BUY NOW</a>
+                </div>
+                <div class="ticket-card featured">
+                    <div class="ticket-badge">BEST VALUE</div>
+                    <div class="ticket-price">
+                        <span class="currency">€</span>
+                        <span class="amount">25</span>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> Main stage access</li>
+                        <li><i class="fas fa-check"></i> 20:30 - 04:00</li>
+                        <li><i class="fas fa-check"></i> All bars access</li>
+                        <li><i class="fas fa-check"></i> Priority entry</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">BUY NOW</a>
+                </div>
+                <div class="ticket-card">
+                    <div class="ticket-badge">VIP</div>
+                    <div class="ticket-price">
+                        <span class="currency">€</span>
+                        <span class="amount">40</span>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> Fast-track entry</li>
+                        <li><i class="fas fa-check"></i> VIP bar & viewing</li>
+                        <li><i class="fas fa-check"></i> VIP toilets</li>
+                        <li><i class="fas fa-check"></i> Exclusive gift</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="countdown">
+        <div class="container">
+            <div class="countdown-content">
+                <span class="countdown-label">THE WAIT IS ALMOST OVER</span>
+                <h2 class="countdown-title">FESTIVAL STARTS IN</h2>
+                <div class="timer" id="timer">
+                    <div class="timer-box">
+                        <span id="days">00</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+                <a href="#tickets" class="btn btn-primary btn-large">SECURE YOUR SPOT</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSOR SECTION - VERSIONE PULITA E LEGGIBILE -->
+    <section id="sponsors" class="sponsors-clean">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">OUR PARTNERS</span>
+                <h2 class="section-title">SUPPORTED <span class="gradient-text">BY</span></h2>
+            </div>
+
+            <!-- MAIN SPONSOR (in alto) -->
+            <div class="main-sponsor-clean">
+                <h3>MAIN PARTNER</h3>
+                <div class="main-logo">
+                    <img src="images/sponsors/music-tech/beatwave.png" alt="Beatwave">
+                </div>
+            </div>
+
+            <!-- GOLD SPONSORS (griglia semplice) -->
+            <div class="sponsor-row">
+                <h3>GOLD SPONSORS</h3>
+                <div class="sponsor-grid-clean">
+                    <img src="images/sponsors/music-tech/sonic-lab.png" alt="Sonic Lab">
+                    <img src="images/sponsors/drinks/energy-x.png" alt="Energy X">
+                    <img src="images/sponsors/lifestyle/urban-edge.png" alt="Urban Edge">
+                </div>
+            </div>
+
+            <!-- SILVER SPONSORS (griglia più fitta) -->
+            <div class="sponsor-row">
+                <h3>SILVER SPONSORS</h3>
+                <div class="sponsor-grid-clean small">
+                    <img src="images/sponsors/music-tech/frequency.png" alt="Frequency">
+                    <img src="images/sponsors/music-tech/tune-core.png" alt="Tune Core">
+                    <img src="images/sponsors/lifestyle/street-code.png" alt="Street Code">
+                    <img src="images/sponsors/lifestyle/gravity-wear.png" alt="Gravity Wear">
+                    <img src="images/sponsors/drinks/rhythm-juice.png" alt="Rhythm Juice">
+                    <img src="images/sponsors/drinks/bass-water.png" alt="Bass Water">
+                    <img src="images/sponsors/drinks/beat-fuel.png" alt="Beat Fuel">
+                </div>
+            </div>
+
+            <!-- MEDIA PARTNERS -->
+            <div class="sponsor-row">
+                <h3>MEDIA PARTNERS</h3>
+                <div class="sponsor-grid-clean media">
+                    <img src="images/sponsors/media/lake-beat-radio.png" alt="Lake Beat Radio">
+                    <img src="images/sponsors/media/como-sound.png" alt="Como Sound">
+                    <img src="images/sponsors/media/urban-italia.png" alt="Urban Italia">
+                </div>
+            </div>
+
+            <!-- PARTNER CTA semplice -->
+            <div class="partner-cta-clean">
+                <p>Want to become a partner? <a href="#">Contact us</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">LAKE BEAT</div>
+                    <p>Professional organization · Stage · Audio · Bars</p>
+                    <p>© 2026 Lake Beat Festival · Como, Italy</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#lineup">Lineup</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#sponsors">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
