@@ -185,7 +185,7 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
-.nav-links a:not(.nav-cta):after {
+.nav-links a:not(.nav-cta):not(.nav-dropdown-toggle):after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -196,12 +196,88 @@ h1, h2, h3, h4 {
     transition: width 0.3s;
 }
 
-.nav-links a:not(.nav-cta):hover:after {
+.nav-links a:not(.nav-cta):not(.nav-dropdown-toggle):hover:after {
     width: 100%;
 }
 
 .nav-links a.active {
     color: var(--primary);
+}
+
+/* DROPDOWN MENU */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    pointer-events: auto !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-dropdown-toggle::after {
+    content: '▼';
+    font-size: 0.6rem;
+    transition: transform 0.3s;
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    list-style: none;
+    min-width: 200px;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.nav-dropdown-menu a:hover {
+    background: rgba(255, 0, 85, 0.1);
+    color: var(--primary);
+    padding-left: 24px;
+}
+
+.nav-dropdown-menu a.active {
+    color: var(--primary);
+    background: rgba(255, 0, 85, 0.05);
 }
 
 .nav-cta {
@@ -314,28 +390,41 @@ h1, h2, h3, h4 {
     justify-content: center;
     gap: 60px;
     animation: fadeInUp 1s ease 0.8s both;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 85, 0.2);
+    padding: 30px 50px;
+    border-radius: 20px;
+    margin-top: 40px;
 }
-
-
 
 .stat-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+    border-right: none;
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 800;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
 }
 
 .stat-label {
-    font-size: 0.9rem;
-    color: var(--text-gray);
+    font-size: 0.85rem;
+    color: var(--text-light);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .hero-scroll {
@@ -1103,6 +1192,35 @@ h1, h2, h3, h4 {
     .nav-links.active {
         left: 0;
     }
+
+    .nav-dropdown-menu {
+        position: static;
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        max-height: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+        transform-origin: top;
+        transition: all 0.3s;
+    }
+
+    .nav-dropdown-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+        max-height: 500px;
+        background: rgba(255, 0, 85, 0.1);
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    .nav-dropdown-menu a {
+        padding: 12px 20px;
+    }
     
     .hero-title {
         font-size: 4rem;
@@ -1111,6 +1229,21 @@ h1, h2, h3, h4 {
     .hero-stats {
         flex-direction: column;
         gap: 20px;
+        padding: 25px 20px;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 0;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
     }
     
     .vibe-cards,

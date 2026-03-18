@@ -19,6 +19,19 @@ if (menuToggle) {
     });
 }
 
+// DROPDOWN MENU TOGGLE FOR MOBILE
+const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = toggle.closest('.nav-dropdown');
+            const menu = dropdown.querySelector('.nav-dropdown-menu');
+            menu.classList.toggle('active');
+        }
+    });
+});
+
 // ACTIVE LINK HIGHLIGHTING
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
