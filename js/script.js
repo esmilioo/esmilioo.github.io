@@ -111,6 +111,59 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// LOCATION GALLERY SLIDER
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryImage = document.querySelector('.gallery-img');
+    const galleryThumbs = Array.from(document.querySelectorAll('.gallery-thumbs .thumb'));
+    if (!galleryImage || galleryThumbs.length === 0) return;
+
+    let currentIndex = 0;
+    const thumbnails = galleryThumbs.map((thumb, index) => {
+        const src = thumb.dataset.image || galleryImage.src;
+        const alt = thumb.dataset.alt || `${galleryImage.alt} ${index + 1}`;
+
+        thumb.style.backgroundImage = `url(${src})`;
+        thumb.setAttribute('aria-pressed', index === 0 ? 'true' : 'false');
+
+        thumb.addEventListener('click', () => {
+            currentIndex = index;
+            updateGallery(index);
+            resetGalleryTimer();
+        });
+
+        return { thumb, src, alt };
+    });
+
+    const updateGallery = (index) => {
+        thumbnails.forEach((item, i) => {
+            const active = i === index;
+            item.thumb.classList.toggle('active', active);
+            item.thumb.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        galleryImage.classList.add('fade');
+        setTimeout(() => {
+            galleryImage.src = thumbnails[index].src;
+            galleryImage.alt = thumbnails[index].alt;
+            galleryImage.classList.remove('fade');
+        }, 200);
+    };
+
+    let galleryTimer = setInterval(() => {
+        currentIndex = (currentIndex + 1) % thumbnails.length;
+        updateGallery(currentIndex);
+    }, 5000);
+
+    const resetGalleryTimer = () => {
+        clearInterval(galleryTimer);
+        galleryTimer = setInterval(() => {
+            currentIndex = (currentIndex + 1) % thumbnails.length;
+            updateGallery(currentIndex);
+        }, 5000);
+    };
+
+    updateGallery(0);
+});
+
 // SPONSOR CAROUSEL - CLONAZIONE PER EFFETTO INFINITO
 document.addEventListener('DOMContentLoaded', function() {
     const sponsorCarousel = document.getElementById('sponsorCarousel');

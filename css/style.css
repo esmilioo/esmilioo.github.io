@@ -536,16 +536,35 @@ h1, h2, h3, h4 {
 .thumb {
     width: 60px;
     height: 60px;
-    background: var(--glass-bg);
+    background: var(--glass-bg) center/cover no-repeat;
     border: 1px solid var(--glass-border);
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.thumb:hover,
+.thumb:focus {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 .thumb.active {
     border-color: var(--primary);
     transform: scale(1.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+    object-fit: cover;
+}
+
+.gallery-img.fade {
+    opacity: 0;
 }
 
 /* VIBE SECTION MODERNA */
@@ -615,6 +634,78 @@ h1, h2, h3, h4 {
 }
 
 .vibe-label {
+    color: var(--text-gray);
+}
+
+/* SECURITY SECTION MODERNA */
+.security {
+    padding: 100px 0;
+    background: var(--bg-dark);
+}
+
+.security-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--glass-bg);
+    padding: 60px 40px;
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.security-content:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,0,85,0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.security-icon-main {
+    font-size: 4rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+.security-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 1;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.security-item {
+    text-align: center;
+}
+
+.security-item i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.security-item span {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: var(--text-gray);
 }
 
@@ -726,6 +817,65 @@ h1, h2, h3, h4 {
     font-size: 1.2rem;
     color: var(--text-gray);
     margin-bottom: 20px;
+}
+
+.lineup-section {
+    display: grid;
+    gap: 70px;
+}
+
+.lineup-subsection {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    padding: 40px;
+}
+
+.subsection-header {
+    margin-bottom: 35px;
+}
+
+.subsection-title {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    line-height: 1.1;
+}
+
+.schedule-wrapper {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.schedule-table th {
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.schedule-table tbody tr:hover {
+    background: rgba(255, 0, 85, 0.08);
+}
+
+.schedule-table td {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* TICKETS SECTION MODERNA */
@@ -1250,6 +1400,7 @@ h1, h2, h3, h4 {
     .ticket-grid,
     .footer-grid,
     .app-content,
+    .security-grid,
     .location-grid {
         grid-template-columns: 1fr;
     }

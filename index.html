@@ -24,6 +24,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#lineup">Lineup</a></li>
+                <li><a href="#security">Security</a></li>
                 <li><a href="#tickets">Tickets</a></li>
                 <li class="nav-dropdown">
                     <a href="#" class="nav-dropdown-toggle">The Project</a>
@@ -112,9 +113,9 @@
                         <img src="images/hero/hero-piazza.jpg" alt="Piazza Cavour with stage" class="gallery-img">
                     </div>
                     <div class="gallery-thumbs">
-                        <div class="thumb active"></div>
-                        <div class="thumb"></div>
-                        <div class="thumb"></div>
+                        <button type="button" class="thumb active" data-image="images/hero/hero-piazza.jpg" data-alt="Piazza Cavour with stage - view 1" aria-label="Mostra vista 1"></button>
+                        <button type="button" class="thumb" data-image="images/hero/hero-piazza-2.png" data-alt="Piazza Cavour with stage - view 2" aria-label="Mostra vista 2"></button>
+                        <button type="button" class="thumb" data-image="images/hero/hero-piazza-3.png" data-alt="Piazza Cavour with stage - view 3" aria-label="Mostra vista 3"></button>
                     </div>
                 </div>
             </div>
@@ -153,6 +154,42 @@
         </div>
     </section>
 
+    <!-- SECURITY SECTION -->
+    <section id="security" class="security">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">SAFETY FIRST</span>
+                <h2 class="section-title">OUR <span class="gradient-text">SECURITY</span></h2>
+            </div>
+            <div class="security-content">
+                <div class="security-icon-main">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="security-text">
+                    <p>At Lake Beat, your safety is our top priority. We've designed a comprehensive security protocol to ensure a 100% safe environment for all our friends. Our massive team of over 50 professional bodyguards and stewards works around the clock to manage the crowd and backstage areas with precision. From high-tech metal detectors at every entrance to age-verification wristbands for responsible drinking, every detail is covered. We monitor the entire square with a professional camera network and coordinate directly with the local Police and the Red Cross, who maintain an advanced medical post on-site. Equipped with high-visibility gear and instant radio communication, our staff is ready to react to any situation, allowing you to focus solely on the music and the experience.</p>
+                </div>
+                <div class="security-grid">
+                    <div class="security-item">
+                        <i class="fas fa-user-shield"></i>
+                        <span>50+ Bodyguards</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-video"></i>
+                        <span>24/7 Monitoring</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-first-aid"></i>
+                        <span>Medical Post</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>Age Control</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- LINEUP SECTION -->
     <section id="lineup" class="lineup">
         <div class="container">
@@ -160,84 +197,157 @@
                 <span class="section-subtitle">THE ARTISTS</span>
                 <h2 class="section-title">LINEUP <span class="gradient-text">2026</span></h2>
             </div>
-            <div class="lineup-grid">
-                <div class="artist-card headliner">
-                    <div class="artist-image">
-                        <!-- FOTO ANUEL AA -->
-                        <img src="images/artists/anuel-aa.jpg" alt="Anuel AA">
-                        <div class="artist-overlay">
-                            <span class="artist-day">SATURDAY</span>
+
+            <div class="lineup-section">
+                <div class="lineup-subsection">
+                    <div class="subsection-header">
+                        <span class="section-subtitle">ARTISTI</span>
+                        <h3 class="subsection-title">Tutti gli artisti in lineup</h3>
+                    </div>
+                    <div class="lineup-grid">
+                        <div class="artist-card headliner">
+                            <div class="artist-image">
+                                <!-- FOTO ANUEL AA -->
+                                <img src="images/artists/anuel-aa.jpg" alt="Anuel AA">
+                                <div class="artist-overlay">
+                                    <span class="artist-day">SATURDAY</span>
+                                </div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>ANUEL AA</h3>
+                                <span class="artist-genre">REGGAETON · HEADLINER</span>
+                            </div>
+                        </div>
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <!-- FOTO RVFV -->
+                                <img src="images/artists/rvfv.jpg" alt="Rvfv">
+                            </div>
+                            <div class="artist-info">
+                                <h3>RVFV</h3>
+                                <span class="artist-genre">REGGAETON</span>
+                            </div>
+                        </div>
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <!-- FOTO 22simba -->
+                                <img src="images/artists/22simba.jpg" alt="22simba">
+                            </div>
+                            <div class="artist-info">
+                                <h3>22SIMBA</h3>
+                                <span class="artist-genre">TRAP</span>
+                            </div>
+                        </div>
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <!-- FOTO Sfera Ebbasta -->
+                                <img src="images/artists/sfera-ebbasta.jpg" alt="Sfera Ebbasta">
+                            </div>
+                            <div class="artist-info">
+                                <h3>SFERA EBBASTA</h3>
+                                <span class="artist-genre">TRAP</span>
+                            </div>
+                        </div>
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <!-- FOTO OZUNA -->
+                                <img src="images/artists/ozuna.jpg" alt="Ozuna">
+                            </div>
+                            <div class="artist-info">
+                                <h3>OZUNA</h3>
+                                <span class="artist-genre">REGGAETON</span>
+                            </div>
+                        </div>
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <!-- FOTO Bad Bunny -->
+                                <img src="images/artists/bad-bunny.jpg" alt="Bad Bunny">
+                            </div>
+                            <div class="artist-info">
+                                <h3>BAD BUNNY</h3>
+                                <span class="artist-genre">REGGAETON</span>
+                            </div>
+                        </div>
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <!-- FOTO Artie 5ive -->
+                                <img src="images/artists/artie-5ive.jpg" alt="Artie 5ive">
+                            </div>
+                            <div class="artist-info">
+                                <h3>ARTIE 5IVE</h3>
+                                <span class="artist-genre">TRAP</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="artist-info">
-                        <h3>ANUEL AA</h3>
-                        <span class="artist-genre">REGGAETON · HEADLINER</span>
+                    <div class="lineup-cta">
+                        <p>+ More artists to be announced</p>
+                        <a href="#tickets" class="btn btn-outline-light">PRENOTA I BIGLIETTI</a>
                     </div>
                 </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <!-- FOTO RVFV -->
-                        <img src="images/artists/rvfv.jpg" alt="Rvfv">
+
+                <div class="lineup-subsection lineup-schedule">
+                    <div class="subsection-header">
+                        <span class="section-subtitle">PROGRAMMA MUSICA</span>
+                        <h3 class="subsection-title">Tabella di programmazione</h3>
                     </div>
-                    <div class="artist-info">
-                        <h3>RVFV</h3>
-                        <span class="artist-genre">REGGAETON</span>
+                    <div class="schedule-wrapper">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Orario</th>
+                                    <th>Artista</th>
+                                    <th>Genere</th>
+                                    <th>Stage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sabato</td>
+                                    <td>20:30 - 21:15</td>
+                                    <td>22SIMBA</td>
+                                    <td>TRAP</td>
+                                    <td>Main Stage</td>
+                                </tr>
+                                <tr>
+                                    <td>Sabato</td>
+                                    <td>21:30 - 22:15</td>
+                                    <td>RVFV</td>
+                                    <td>REGGAETON</td>
+                                    <td>Dance Stage</td>
+                                </tr>
+                                <tr>
+                                    <td>Sabato</td>
+                                    <td>22:30 - 23:30</td>
+                                    <td>SFERA EBBASTA</td>
+                                    <td>TRAP</td>
+                                    <td>Main Stage</td>
+                                </tr>
+                                <tr>
+                                    <td>Sabato</td>
+                                    <td>23:45 - 01:00</td>
+                                    <td>ANUEL AA</td>
+                                    <td>REGGAETON</td>
+                                    <td>Main Stage</td>
+                                </tr>
+                                <tr>
+                                    <td>Domenica</td>
+                                    <td>01:15 - 02:45</td>
+                                    <td>BAD BUNNY</td>
+                                    <td>REGGAETON</td>
+                                    <td>Main Stage</td>
+                                </tr>
+                                <tr>
+                                    <td>Domenica</td>
+                                    <td>03:00 - 04:00</td>
+                                    <td>ARTIE 5IVE</td>
+                                    <td>TRAP</td>
+                                    <td>Late Night</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <!-- FOTO 22simba -->
-                        <img src="images/artists/22simba.jpg" alt="22simba">
-                    </div>
-                    <div class="artist-info">
-                        <h3>22SIMBA</h3>
-                        <span class="artist-genre">TRAP</span>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <!-- FOTO Sfera Ebbasta -->
-                        <img src="images/artists/sfera-ebbasta.jpg" alt="Sfera Ebbasta">
-                    </div>
-                    <div class="artist-info">
-                        <h3>SFERA EBBASTA</h3>
-                        <span class="artist-genre">TRAP</span>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <!-- FOTO OZUNA -->
-                        <img src="images/artists/ozuna.jpg" alt="Ozuna">
-                    </div>
-                    <div class="artist-info">
-                        <h3>OZUNA</h3>
-                        <span class="artist-genre">REGGAETON</span>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <!-- FOTO Bad Bunny -->
-                        <img src="images/artists/bad-bunny.jpg" alt="Bad Bunny">
-                    </div>
-                    <div class="artist-info">
-                        <h3>BAD BUNNY</h3>
-                        <span class="artist-genre">REGGAETON</span>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <!-- FOTO Artie 5ive -->
-                        <img src="images/artists/artie-5ive.jpg" alt="Artie 5ive">
-                    </div>
-                    <div class="artist-info">
-                        <h3>ARTIE 5IVE</h3>
-                        <span class="artist-genre">TRAP</span>
-                    </div>
-                </div>
-            </div>
-            <div class="lineup-cta">
-                <p>+ More artists to be announced</p>
-                <a href="#" class="btn btn-outline-light">FULL SCHEDULE</a>
             </div>
         </div>
     </section>
