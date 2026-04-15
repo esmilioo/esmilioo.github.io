@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
 }
 
-/* NAVBAR MODERNA */
+/* MODERN NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -1039,13 +1039,13 @@ h1, h2, h3, h4 {
     opacity: 0.8;
 }
 
-/* ===== SPONSOR SECTION - VERSIONE PULITA ===== */
+/* ===== SPONSOR SECTION - CLEAN VERSION ===== */
 .sponsors-clean {
     padding: 100px 0;
     background: var(--bg-dark);
 }
 
-/* Titoli delle categorie */
+/* Category titles */
 .sponsor-row h3,
 .main-sponsor-clean h3 {
     text-align: center;
@@ -1079,7 +1079,7 @@ h1, h2, h3, h4 {
     opacity: 1;
 }
 
-/* Griglie sponsor */
+/* Sponsor grids */
 .sponsor-grid-clean {
     display: flex;
     flex-wrap: wrap;
@@ -1120,7 +1120,7 @@ h1, h2, h3, h4 {
     transform: scale(1.05);
 }
 
-/* Partner CTA semplice */
+/* Simple partner CTA */
 .partner-cta-clean {
     text-align: center;
     margin-top: 40px;
@@ -1928,7 +1928,7 @@ h1, h2, h3, h4 {
     }
 }
 
-/* ===== ABOUT PAGE - VERSIONE PULITA E LEGGIBILE ===== */
+/* ===== ABOUT PAGE - CLEAN & READABLE VERSION ===== */
 
 /* About Header */
 .about-header {
